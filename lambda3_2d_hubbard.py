@@ -346,7 +346,9 @@ def run_2d_hubbard():
         print(f"{'Dimension':>12} {'γ (weak U)':>12} {'γ (strong U)':>12}")
         print("-" * 40)
         print(f"{'1D chain':>12} {'~2.1':>12} {'~0.8':>12}")
-        print(f"{'2D square':>12} {f'~{gamma_results[0][\"gamma\"]:.1f}':>12} {f'~{gamma_results[-1][\"gamma\"]:.1f}':>12}")
+        gamma_weak = gamma_results[0]['gamma']
+        gamma_strong = gamma_results[-1]['gamma']
+        print(f"{'2D square':>12} {'~' + f'{gamma_weak:.1f}':>12} {'~' + f'{gamma_strong:.1f}':>12}")
         print(f"{'3D cubic':>12} {'~0':>12} {'~0':>12}")
     
     return results, gamma_results
